@@ -19,7 +19,6 @@ class Chirp < Formula
 
 
   def install
-    rm_f "chirp/drivers/generic_xml.py"
     inreplace "setup.py", "darwin", "noop"
     inreplace "chirp/ui/mainapp.py", "reporting.check_for_updates(updates_callback)", "pass"
 
